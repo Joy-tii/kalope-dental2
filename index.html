@@ -180,19 +180,12 @@
 
           <!-- Search Bar -->
           <div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-4 justify-center">
-            <!-- Location Input -->
-            <div class="relative w-[150px] group">
-              <span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 z-10 text-sm">📍</span>
-              <input type="text" placeholder="Location"
-                class="pl-8 w-full h-10 text-sm rounded-md text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
-            </div>
-
-            <!-- Search Keyword Input -->
-            <div class="relative w-[220px] group">
-              <input type="text" placeholder="Search clinics..."
+            <!-- Search Keyword Input (Updated) -->
+            <div class="relative w-[370px] group"> <!-- Combined width of both inputs -->
+              <input type="text" placeholder="Search clinics,locations..."
                 class="w-full h-10 text-sm px-3 rounded-md text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
             </div>
-
+          
             <!-- Search Button -->
             <button
               class="group relative px-5 py-2 text-sm font-semibold text-white rounded-md shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
@@ -205,6 +198,7 @@
               <span>Search</span>
             </button>
           </div>
+          
         </div>
 
         <!-- Cards Section -->
@@ -212,9 +206,9 @@
 
   <!-- Card 1 -->
   <div
-    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-700 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
+    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
     <div
-      class="mb-1 sm:mb-2 text-blue-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
+      class="mb-1 sm:mb-2 text-white-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
       <i class="fas fa-user-md"></i>
     </div>
     <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Consult</p>
@@ -222,9 +216,9 @@
 
   <!-- Card 2 -->
   <div
-    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-700 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
+    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
     <div
-      class="mb-1 sm:mb-2 text-blue-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
+      class="mb-1 sm:mb-2 text-white-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
       <i class="fas fa-pills"></i>
     </div>
     <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Medicines</p>
@@ -232,9 +226,9 @@
 
   <!-- Card 3 -->
   <div
-    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-700 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
+    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
     <div
-      class="mb-1 sm:mb-2 text-blue-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
+      class="mb-1 sm:mb-2 text-white-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
       <i class="fas fa-file-medical"></i>
     </div>
     <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Records</p>
@@ -242,9 +236,9 @@
 
   <!-- Card 4 -->
   <div
-    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-700 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
+    class="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-md flex flex-col items-center justify-center">
     <div
-      class="mb-1 sm:mb-2 text-blue-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
+      class="mb-1 sm:mb-2 text-white-700 text-lg sm:text-xl md:text-2xl flex justify-center items-center">
       <i class="fas fa-vials"></i>
     </div>
     <p class="text-[10px] sm:text-sm font-medium hidden sm:block">Book Test</p>
@@ -267,185 +261,148 @@
     
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
     
-        <!-- Clinic Card 1 -->
-        <div class="relative rounded-sm shadow-xl overflow-hidden bg-white">
-          <img src="./assest/smile-bright-dental-clinic.avif" alt="SmileBright Dental Clinic"
-            class="w-full h-52 object-cover" />
-          <div class="p-5 space-y-2">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-md shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.015] flex flex-col">
+          <img src="./assest/smile-bright-dental-clinic.avif" alt="SmileBright Dental Clinic" class="w-full h-52 object-cover" />
+          <div class="p-4 flex flex-col flex-grow">
             <div class="flex items-center justify-between">
-              <h3 class="text-xl font-semibold text-gray-800">SmileBright Dental Clinic</h3>
-              <span class="flex items-center gap-1 text-sm text-blue-700">
-                <i class="fas fa-star"></i> 4.9 / 5
+              <h3 class="text-lg font-semibold text-gray-800">SmileBright Dental Clinic</h3>
+              <span class="flex items-center text-sm text-blue-600 gap-1">
+                <i class="fas fa-star"></i> 4.9
               </span>
             </div>
-            <p class="text-sm text-gray-600"><i class="fas fa-map-marker-alt text-blue-700"></i> Patna, Bihar</p>
-            <p class="text-sm text-gray-700"><i class="fas fa-tooth text-blue-700"></i> Dental · Cosmetic Dentistry</p>
-            <p class="text-sm font-semibold text-green-500"><i class="fas fa-check-circle text-blue-700"></i> Available Today</p>
-            <div class="flex flex-wrap gap-2 text-xs mt-2">
-              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Braces</span>
-              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Teeth Whitening</span>
+            <p class="text-sm text-gray-500 mt-1"><i class="fas fa-map-marker-alt text-blue-500 mr-1"></i> Patna, Bihar</p>
+            <p class="text-sm text-gray-700">Dental · Cosmetic Dentistry</p>
+            <div class="flex flex-wrap gap-2 text-xs mt-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-sm">Braces</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-sm">Whitening</span>
             </div>
-            <p class="italic text-sm text-gray-500 mt-2">“Gentle care. Bright smiles.”</p>
-            <button
-              class="mt-4 w-full text-white py-2 rounded-lg font-medium transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              style="background: radial-gradient(circle at center, rgba(50, 80, 120, 0.8) 0%, rgba(30, 50, 100, 0.9) 100%);">
-              Book Now
-            </button>
+            <div class="mt-auto flex justify-center">
+              <button class="w-full py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-blue-700 hover:bg-blue-700 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
     
-        <!-- Clinic Card 2 -->
-        <div class="relative rounded-sm shadow-xl overflow-hidden bg-white">
-          <img src="./assest/Healing Touch Multispeciality Hospital.webp" alt="Healing Touch Multispeciality"
-            class="w-full h-52 object-cover" />
-          <div class="p-5 space-y-2">
+        <!-- Card 2 -->
+        <div class="bg-white rounded-md shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.015] flex flex-col">
+          <img src="./assest/Healing Touch Multispeciality Hospital.webp" alt="Healing Touch Hospital" class="w-full h-52 object-cover" />
+          <div class="p-4 flex flex-col flex-grow">
             <div class="flex items-center justify-between">
-              <h3 class="text-xl font-semibold text-gray-800">Healing Touch Multispeciality</h3>
-              <span class="flex items-center gap-1 text-sm text-blue-700">
-                <i class="fas fa-star"></i> 4.7 / 5
+              <h3 class="text-lg font-semibold text-gray-800">Healing Touch Multispeciality</h3>
+              <span class="flex items-center text-sm text-blue-600 gap-1">
+                <i class="fas fa-star"></i> 4.7
               </span>
             </div>
-            <p class="text-sm text-gray-600"><i class="fas fa-map-marker-alt text-blue-700"></i> Muzaffarpur</p>
-            <p class="text-sm text-gray-700"><i class="fas fa-hospital text-blue-700"></i> General · ENT · Pediatrics</p>
-            <p class="text-sm font-semibold text-green-500"><i class="fas fa-check-circle text-blue-700"></i> Walk-ins Welcome</p>
-            <div class="flex flex-wrap gap-2 text-xs mt-2">
-              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">ENT</span>
-              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Child Care</span>
+            <p class="text-sm text-gray-500 mt-1"><i class="fas fa-map-marker-alt text-blue-500 mr-1"></i> Muzaffarpur</p>
+            <p class="text-sm text-gray-700">General · ENT · Pediatrics</p>
+            <div class="flex flex-wrap gap-2 text-xs mt-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-sm">ENT</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-sm">Child Care</span>
             </div>
-            <p class="italic text-sm text-gray-500 mt-2">“Compassionate care for every patient.”</p>
-            <button
-              class="mt-4 w-full text-white py-2 rounded-lg font-medium transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              style="background: radial-gradient(circle at center, rgba(50, 80, 120, 0.8) 0%, rgba(30, 50, 100, 0.9) 100%);">
-              View Details
-            </button>
+            <div class="mt-auto flex justify-center">
+              <button class="w-full py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-blue-700 hover:bg-blue-700 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                View Details
+              </button>
+            </div>
           </div>
         </div>
     
-        <!-- Clinic Card 3 -->
-        <div class="relative rounded-sm shadow-xl overflow-hidden bg-white">
+        <!-- Card 3 -->
+        <div class="bg-white rounded-md shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-[1.015] flex flex-col">
           <img src="./assest/CityCare Clinic.jpeg" alt="CityCare Clinic" class="w-full h-52 object-cover" />
-          <div class="p-5 space-y-2">
+          <div class="p-4 flex flex-col flex-grow">
             <div class="flex items-center justify-between">
-              <h3 class="text-xl font-semibold text-gray-800">CityCare Clinic</h3>
-              <span class="flex items-center gap-1 text-sm text-blue-700">
-                <i class="fas fa-star"></i> 4.8 / 5
+              <h3 class="text-lg font-semibold text-gray-800">CityCare Clinic</h3>
+              <span class="flex items-center text-sm text-blue-600 gap-1">
+                <i class="fas fa-star"></i> 4.8
               </span>
             </div>
-            <p class="text-sm text-gray-600"><i class="fas fa-map-marker-alt text-blue-700"></i> Gaya</p>
-            <p class="text-sm text-gray-700"><i class="fas fa-heartbeat text-blue-700"></i> Cardiology · General Checkups</p>
-            <p class="text-sm font-semibold text-green-500"><i class="fas fa-check-circle text-blue-700"></i> Appointments Available</p>
-            <div class="flex flex-wrap gap-2 text-xs mt-2">
-              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Heart Check</span>
-              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Full Body</span>
+            <p class="text-sm text-gray-500 mt-1"><i class="fas fa-map-marker-alt text-blue-500 mr-1"></i> Gaya</p>
+            <p class="text-sm text-gray-700">Cardiology · General Checkups</p>
+            <div class="flex flex-wrap gap-2 text-xs mt-2 mb-4">
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-sm">Heart Check</span>
+              <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-sm">Full Body</span>
             </div>
-            <p class="italic text-sm text-gray-500 mt-2">“Your health, our priority.”</p>
-            <button
-              class="mt-4 w-full text-white py-2 rounded-lg font-medium transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-300"
-              style="background: radial-gradient(circle at center, rgba(50, 80, 120, 0.8) 0%, rgba(30, 50, 100, 0.9) 100%);">
-              Book Appointment
-            </button>
+            <div class="mt-auto flex  justify-center">
+              <button class="w-full py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-blue-700 hover:bg-blue-700 rounded-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                Book Appointment
+              </button>
+            </div>
           </div>
         </div>
     
       </div>
     </section>
+    
+    
     
 
     <!-- cities category section -->
-    <section class="bg-gradient-to-b from-white to-blue-50 px-6 py-12 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800">Cities</h2>
-        <p class="text-gray-600 mt-2">Explore top healthcare services available across major cities</p>
-      </div>
-    
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-    
-        <!-- Patna -->
-        <div onclick="handleCityClick('Patna')"
-          class="relative cursor-pointer bg-[rgba(10,20,50,0.9)] backdrop-blur-md rounded-xl border border-blue-200 p-6 pt-10 shadow-xl transition hover:shadow-2xl group">
-          <!-- Icon -->
-          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-blue-500">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 11c1.38 0 2.5-1.12 2.5-2.5S13.38 6 12 6s-2.5 1.12-2.5 2.5S10.62 11 12 11z" />
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1114 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-white text-center mt-4">Patna</h3>
-          <p class="text-sm text-gray-200 text-center mt-2">20+ Clinics · 100+ Doctors</p>
+    <section class="text-gray-600 body-font  px-6 py-10 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
+      <div class="container mx-auto">
+        <!-- Heading -->
+        <div class="flex flex-col text-center w-full mb-8"> <!-- Reduced margin bottom -->
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Cities</h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-700">
+            Explore top healthcare services available across major cities
+          </p>
         </div>
     
-        <!-- Gaya -->
-        <div onclick="handleCityClick('Gaya')"
-          class="relative cursor-pointer bg-[rgba(10,20,50,0.9)] backdrop-blur-md rounded-xl border border-blue-200 p-6 pt-10 shadow-xl transition hover:shadow-2xl group">
-          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-blue-500">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 11c1.38 0 2.5-1.12 2.5-2.5S13.38 6 12 6s-2.5 1.12-2.5 2.5S10.62 11 12 11z" />
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1114 0z" />
-            </svg>
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+    
+          <!-- Patna -->
+          <div onclick="handleCityClick('Patna')" class="w-full max-w-sm flex bg-[#08112E] text-white border border-gray-700 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg hover:scale-[1.03] transition-transform duration-300">
+            <img src="./assest/patna.jpeg" alt="Patna"
+              class="w-24 h-24 object-cover object-center rounded-full m-4 border-2 border-white" />
+            <div class="p-4 flex flex-col justify-center">
+              <h2 class="text-white text-lg font-semibold mb-1">Patna</h2>
+              <p class="text-gray-300 text-sm">20+ Clinics · 100+ Doctors</p>
+            </div>
           </div>
-          <h3 class="text-xl font-semibold text-white text-center mt-4">Gaya</h3>
-          <p class="text-sm text-gray-200 text-center mt-2">20+ Clinics · 100+ Doctors</p>
-        </div>
     
-        <!-- Muzaffarpur -->
-        <div onclick="handleCityClick('Muzaffarpur')"
-          class="relative cursor-pointer bg-[rgba(10,20,50,0.9)] backdrop-blur-md rounded-xl border border-blue-200 p-6 pt-10 shadow-xl transition hover:shadow-2xl group">
-          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-blue-500">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 11c1.38 0 2.5-1.12 2.5-2.5S13.38 6 12 6s-2.5 1.12-2.5 2.5S10.62 11 12 11z" />
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1114 0z" />
-            </svg>
+          <!-- Gaya -->
+          <div onclick="handleCityClick('Gaya')" class="w-full max-w-sm flex bg-[#08112E] text-white border border-gray-700 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg hover:scale-[1.03] transition-transform duration-300">
+            <img src="./assest/gaya2.jpeg" alt="Gaya"
+              class="w-24 h-24 object-cover object-center rounded-full m-4 border-2 border-white" />
+            <div class="p-4 flex flex-col justify-center">
+              <h2 class="text-white text-lg font-semibold mb-1">Gaya</h2>
+              <p class="text-gray-300 text-sm">20+ Clinics · 100+ Doctors</p>
+            </div>
           </div>
-          <h3 class="text-xl font-semibold text-white text-center mt-4">Muzaffarpur</h3>
-          <p class="text-sm text-gray-200 text-center mt-2">20+ Clinics · 100+ Doctors</p>
-        </div>
     
-        <!-- Hajipur -->
-        <div onclick="handleCityClick('Hajipur')"
-          class="relative cursor-pointer bg-[rgba(10,20,50,0.9)] backdrop-blur-md rounded-xl border border-blue-200 p-6 pt-10 shadow-xl transition hover:shadow-2xl group">
-          <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 text-blue-500">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M12 11c1.38 0 2.5-1.12 2.5-2.5S13.38 6 12 6s-2.5 1.12-2.5 2.5S10.62 11 12 11z" />
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 1114 0z" />
-            </svg>
+          <!-- Muzaffarpur -->
+          <div onclick="handleCityClick('Muzaffarpur')" class="w-full max-w-sm flex bg-[#08112E] text-white border border-gray-700 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg hover:scale-[1.03] transition-transform duration-300">
+            <img src="./assest/muzaffarpur.jpeg" alt="Muzaffarpur"
+              class="w-24 h-24 object-cover object-center rounded-full m-4 border-2 border-white" />
+            <div class="p-4 flex flex-col justify-center">
+              <h2 class="text-white text-lg font-semibold mb-1">Muzaffarpur</h2>
+              <p class="text-gray-300 text-sm">20+ Clinics · 100+ Doctors</p>
+            </div>
           </div>
-          <h3 class="text-xl font-semibold text-white text-center mt-4">Hajipur</h3>
-          <p class="text-sm text-gray-200 text-center mt-2">20+ Clinics · 100+ Doctors</p>
+    
         </div>
-    
-      </div>
-    
-      <div class="flex justify-center mt-10">
-        <a href="#"
-          class="inline-block px-5 py-2 font-semibold text-blue-900 bg-white rounded-xl border border-blue-500 transition-all duration-300 ease-in-out
-                 hover:text-white hover:bg-blue-900/90 hover:backdrop-blur-md hover:border-white/40 hover:shadow-[0_0_8px_rgba(50,80,120,0.3)]
-                 focus:outline-none focus:ring-2 focus:ring-blue-400">
-          Explore More
-        </a>
       </div>
     </section>
     
+    
  
 
-    <section class="text-gray-600 body-font px-6 py-10 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
+    <section class="bg-gradient-to-r from-blue-50 to-blue-100 text-gray-600 body-font px-6 py-10 sm:px-10 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
       <div class="container px-5 py-10 mx-auto">
         <div class="flex flex-wrap w-full mb-10 flex-col items-center text-center">
           <h1 class="sm:text-3xl text-2xl font-bold title-font mb-2 text-gray-900">Our Services</h1>
-          <p class="lg:w-1/2 w-full leading-relaxed text-gray-600">We offer a wide range of specialized dental and medical care services tailored to all age groups.</p>
+          <p class="lg:w-1/2 w-full leading-relaxed text-gray-600">
+            We offer a wide range of specialized dental and medical care services tailored to all age groups.
+          </p>
         </div>
     
         <div class="flex flex-wrap -m-4">
           <!-- Orthodontics -->
           <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div onclick="handleServiceClick('Orthodontics')" class="border border-blue-200 p-6 rounded-lg hover:shadow-xl cursor-pointer transition">
+            <div onclick="handleServiceClick('Orthodontics')" class="bg-white border border-blue-200 p-6 rounded-lg hover:shadow-xl cursor-pointer transition">
               <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-3">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6M9 16h6M9 8h6" />
@@ -458,7 +415,7 @@
     
           <!-- Pediatrics -->
           <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div onclick="handleServiceClick('Pediatrics')" class="border border-blue-200 p-6 rounded-lg hover:shadow-xl cursor-pointer transition">
+            <div onclick="handleServiceClick('Pediatrics')" class="bg-white border border-blue-200 p-6 rounded-lg hover:shadow-xl cursor-pointer transition">
               <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-3">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9M4 20h.01M4 4h16v16H4z" />
@@ -471,7 +428,7 @@
     
           <!-- General Dentistry -->
           <div class="xl:w-1/3 md:w-1/2 p-4">
-            <div onclick="handleServiceClick('General Dentistry')" class="border border-blue-200 p-6 rounded-lg hover:shadow-xl cursor-pointer transition">
+            <div onclick="handleServiceClick('General Dentistry')" class="bg-white border border-blue-200 p-6 rounded-lg hover:shadow-xl cursor-pointer transition">
               <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-3">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5v14" />
@@ -485,13 +442,14 @@
     
         <div class="flex justify-center mt-8">
           <a href="#"
-            class="inline-block px-5 py-2 font-semibold text-white bg-blue-900 rounded-xl border border-blue-900 transition-all duration-300 ease-in-out
-                   hover:text-blue-900 hover:bg-white hover:border-blue-500 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+            class="inline-block px-5 py-2 font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-700 rounded-md border border-blue-900 transition-all duration-300 ease-in-out
+                  hover:bg-white hover:border-blue-500 hover:text-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">
             Explore More
           </a>
         </div>
       </div>
     </section>
+    
     
 
     <section class="text-white body-font bg-gray-900 ">
@@ -556,7 +514,10 @@
     
         <!-- Submit Button -->
         <div class="mt-10 text-center">
-          <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
+          <button class="inline-block px-4 py-2 font-semibold text-blue-700 bg-white rounded-md transition-all duration-300 ease-in-out
+          hover:text-white hover:bg-blue-600/10 hover:backdrop-blur-md
+          hover:border hover:border-blue-500 hover:shadow-[0_0_8px_rgba(50,80,120,0.2)]
+          border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400">
             Submit Your Review
           </button>
         </div>
@@ -590,10 +551,15 @@
           <div class="p-4 space-y-1">
             <h3 class="text-base font-semibold text-gray-800">5 Foods That Boost Immunity</h3>
             <p class="text-sm text-blue-800 font-medium">Ms. Swati Kapoor, Dietitian/Nutritionist</p>
-            <p class="text-xs flex items-center gap-2">
-              <span class="text-red-600 flex items-center gap-1">❤️ 750 Likes</span> •
-              <span class="text-red-500 flex items-center gap-1">👁️ 104336 Views</span>
+            <p class="text-xs flex items-center gap-2 text-blue-500 font-semibold">
+              <span class="flex items-center gap-1">
+                <i class="fas fa-heart"></i> 750 Likes
+              </span> •
+              <span class="flex items-center gap-1">
+                <i class="fas fa-eye"></i> 104336 Views
+              </span>
             </p>
+            
           </div>
         </div>
 
@@ -607,10 +573,15 @@
             <h3 class="text-base font-semibold text-gray-800">16 Lifestyle Tips to Get Rid of Belly Fat
             </h3>
             <p class="text-sm text-blue-800 font-medium">Dr. Sachin Goel</p>
-            <p class="text-xs flex items-center gap-2">
-              <span class="text-red-600 flex items-center gap-1">❤️ 488 Likes</span> •
-              <span class="text-red-500 flex items-center gap-1">👁️ 116876 Views</span>
+            <p class="text-xs flex items-center gap-2 text-blue-500 font-semibold">
+              <span class="flex items-center gap-1">
+                <i class="fas fa-heart"></i> 750 Likes
+              </span> •
+              <span class="flex items-center gap-1">
+                <i class="fas fa-eye"></i> 104336 Views
+              </span>
             </p>
+            
           </div>
         </div>
 
@@ -621,10 +592,15 @@
           <div class="p-4 space-y-1">
             <h3 class="text-base font-semibold text-gray-800">"Ghar Ka Ghee" Your Heart-Mate!</h3>
             <p class="text-sm text-blue-800 font-medium">Dr. Avinash Vilas Wankhede</p>
-            <p class="text-xs flex items-center gap-2">
-              <span class="text-red-600 flex items-center gap-1">❤️ 298 Likes</span> •
-              <span class="text-red-500 flex items-center gap-1">👁️ 62139 Views</span>
+            <p class="text-xs flex items-center gap-2 text-blue-500 font-semibold">
+              <span class="flex items-center gap-1">
+                <i class="fas fa-heart"></i> 750 Likes
+              </span> •
+              <span class="flex items-center gap-1">
+                <i class="fas fa-eye"></i> 104336 Views
+              </span>
             </p>
+            
           </div>
         </div>
 
@@ -636,10 +612,15 @@
           <div class="p-4 space-y-1">
             <h3 class="text-base font-semibold text-gray-800">How to Naturally Stay Energetic Daily</h3>
             <p class="text-sm text-blue-800 font-medium">Dr. Anita Sharma</p>
-            <p class="text-xs flex items-center gap-2">
-              <span class="text-red-600 flex items-center gap-1">❤️ 412 Likes</span> •
-              <span class="text-red-500 flex items-center gap-1">👁️ 90234 Views</span>
+            <p class="text-xs flex items-center gap-2 text-blue-500 font-semibold">
+              <span class="flex items-center gap-1">
+                <i class="fas fa-heart"></i> 750 Likes
+              </span> •
+              <span class="flex items-center gap-1">
+                <i class="fas fa-eye"></i> 104336 Views
+              </span>
             </p>
+            
           </div>
         </div>
       </div>

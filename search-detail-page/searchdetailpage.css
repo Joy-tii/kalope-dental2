@@ -1,0 +1,85 @@
+ /* HERO SECTION GRADIENT with opacity */
+ .bg-gradient-hero {
+    background: radial-gradient(circle at 70% 50%,
+        /* rgba(255, 255, 255, 0.18) 0%, */
+        /* rgba(90, 120, 160, 0.3) 30%, */
+        rgba(50, 80, 120, 0.5) 20%,
+        rgba(30, 50, 100, 0.7) 60%,
+        rgba(10, 20, 50, 0.9) 100%);
+  }
+
+  /* HEADER GRADIENT without opacity (solid colors) */
+  .bg-gradient-header {
+    background: radial-gradient(circle at 70% 50%,
+        rgba(50, 80, 120) 60%,
+        rgb(27, 48, 101) 80%,
+        rgb(8, 17, 46) 100%);
+
+    /* #5a78a0 30%,
+        #325078 60%,
+        #1e3264 80%,
+        #0a1432 100%); */
+  }
+
+  .navbar-animate {
+    animation: slideDownFade 0.6s ease-out forwards;
+  }
+  #navbar-search {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+  @keyframes slideDownFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUpFade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slideUpFade 0.6s ease-out forwards;
+  }
+
+  /* Hide scrollbar but still scrollable */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .card-item {
+    width: 4rem;
+    height: 4rem;
+    @apply sm:w-24 sm:h-24 md:w-28 md:h-28 p-2 sm:p-3 border-l-4 border-blue-400 bg-white/10 text-white shadow-md hover:scale-105 transition-all duration-300 cursor-pointer rounded-lg flex flex-col items-center justify-center;
+  }
+
+  .card-icon {
+    @apply w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/20 backdrop-blur-sm shadow-[0_0_18px_rgba(255, 255, 255, 0.25)] flex justify-center items-center mb-1 sm:mb-2;
+  }
+
+  .card-img {
+    @apply w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 object-contain;
+  }
+
+  .card-label {
+    @apply text-[10px] sm:text-sm font-medium hidden sm:block;
+  }

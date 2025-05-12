@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalope Dental - search Details Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./searchdetailpage.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="text-white">
+
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="./assest/hero-image.png" class="w-full h-full object-cover object-right z-0" />
+        <div class="absolute inset-0 bg-gradient-custom z-10"></div>
+    </div>
+
+    <!-- Foreground Content -->
+    <div class="relative z-20">
+
+        <!-- Fixed Navbar (No opacity) -->
+        <header class="bg-gradient-header fixed top-0 left-0 right-0 z-50 shadow-md w-full h-[80px] px-4 sm:px-6 md:px-8 flex items-center justify-between">
+
+            <!-- Brand -->
+            <h1 class="text-xl sm:text-2xl font-bold text-white whitespace-nowrap flex-shrink-0">
+                Kalope Dental
+            </h1>
+        
+            <!-- Centered Search Bar (on desktop only) -->
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
+                <div class="flex items-center space-x-2">
+                    <input type="text" placeholder="Search doctors, clinics and hospitals"
+                        class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+                        focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+        
+                    <button
+                        class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                        </svg>
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- Right Side (Desktop Sign Up & Hamburger) -->
+            <div class="ml-auto flex items-center space-x-4">
+                <!-- ✅ Desktop Only Sign Up -->
+                <a href="#"
+                    class="hidden md:inline-block px-4 py-1 font-semibold text-blue-700 bg-white rounded-sm transition-all duration-300 ease-in-out
+                    hover:text-white hover:bg-blue-600/10 hover:backdrop-blur-md
+                    hover:border hover:border-blue-500 hover:shadow-[0_0_8px_rgba(50,80,120,0.2)]
+                    border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    Sign Up
+                </a>
+        
+                <!-- Hamburger Icon (Mobile only) -->
+                <button id="hamburger-btn" class="md:hidden text-white text-2xl p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+        
+        <!-- ✅ Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="md:hidden hidden flex-col bg-white text-gray-900 w-full px-4 py-4 space-y-3 shadow-md">
+            <a href="#" class="block font-semibold hover:text-blue-600">Home</a>
+            <a href="#" class="block font-semibold hover:text-blue-600">About</a>
+            
+            <!-- ✅ Mobile Only Sign Up -->
+            <a href="#" class="block font-semibold text-white bg-blue-600 px-4 py-2 rounded-sm text-center hover:bg-blue-700 transition">
+                Sign Up
+            </a>
+        </div>
+
+
+<!-- Only visible on small screens -->
+<div class="block md:hidden px-4 pt-[90px] pb-4 bg-gradient-header z-40">
+    <div class="flex items-center space-x-2 w-full max-w-md mx-auto">
+        <input type="text" placeholder="Search doctors, clinics and hospitals"
+            class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+            focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+
+        <button
+            class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+            </svg>
+            <span>Search</span>
+        </button>
+    </div>
+
+
+</div>
+
+
+        <!-- <section id="heroSearchWrapper"
+            class="relative z-10 w-full flex items-center justify-center px-6 lg:px-16 pt-28 pb-8 text-white"
+            style="background-color: rgba(50, 80, 120);">
+
+          
+            <div class="flex flex-col w-full max-w-5xl items-center justify-center text-center">
+                <div class="space-y-6">
+                 
+                    <div class="hero-search-wrapper space-y-4 sm:space-y-0 sm:flex sm:space-x-4 justify-center">
+                     
+                        <div class="relative w-[400px] group">
+                            <input type="text" placeholder="Search doctors, clinics and hospitals"
+                                class="w-full h-10 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 transition duration-300 shadow-sm" />
+                        </div>
+
+                       
+                        <button
+                            class="group relative px-5 py-2 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 text-white group-hover:scale-110 transition-transform duration-200"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                            </svg>
+                            <span>Search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Filter Section with Glassmorphism -->
+        <!-- <section id="filterBar"
+            class=" w-full px-4 py-3 bg-[rgba(50,80,120,0.6)] text-white transition-all duration-300 z-[49]">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+               
+                <div class="flex flex-wrap gap-2">
+
+                    <div
+                        class="backdrop-blur-md bg-white/10 border border-white/20 rounded-sm px-3 py-1.5 flex items-center gap-2 text-sm cursor-pointer hover:bg-white/20 transition">
+                        <span>Availability</span>
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+
+                    
+                    <div
+                        class="backdrop-blur-md bg-white/10 border border-white/20 rounded-sm px-3 py-1.5 flex items-center gap-2 text-sm cursor-pointer hover:bg-white/20 transition">
+                        <span>All Filters</span>
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="backdrop-blur-md bg-white/10 border border-white/20 rounded-sm px-3 py-1.5 flex items-center gap-2 text-sm cursor-pointer hover:bg-white/20 transition">
+                        <span>Video Consult</span>
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="backdrop-blur-md bg-white/10 border border-white/20 rounded-sm px-3 py-1.5 flex items-center gap-2 text-sm cursor-pointer hover:bg-white/20 transition">
+                        <span>All Male Doctors</span>
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="backdrop-blur-md bg-white/10 border border-white/20 rounded-sm px-3 py-1.5 flex items-center gap-2 text-sm cursor-pointer hover:bg-white/20 transition">
+                        <span>Female Doctors</span>
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+
+                    <div
+                        class="backdrop-blur-md bg-white/10 border border-white/20 rounded-sm px-3 py-1.5 flex items-center gap-2 text-sm cursor-pointer hover:bg-white/20 transition">
+                        <span>Sort by Relevance</span>
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="text-sm underline hover:text-blue-300">Reset Filters</button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Doctor Profile Section -->
+
+
+        <section class="bg-white px-4 sm:px-6 py-10 text-gray-900 pt-[40px] sm:pt-[70px] md:pt-[120px]">
+
+
+            <div class="max-w-5xl mx-auto rounded-sm shadow-md p-6 bg-gradient-to-br from-blue-100 to-white">
+              <div class="flex flex-col md:flex-row gap-6">
+          
+                <!-- Doctor Image + Experience Info -->
+                <div class="w-full md:w-1/4 relative">
+                  <img src="./../assest/doctor1.jpeg" alt="Dr. Meera Verma"
+                    class="rounded-sm object-cover md:object-cover object-center w-full h-60 md:h-72 border" />
+          
+                  <!-- Experience Info below image -->
+                  <div class="bg-blue-900 text-white text-center text-sm font-medium py-2 mt-2 rounded-sm">
+                    12+ years experience overall
+                  </div>
+                </div>
+          
+                <!-- Doctor Info -->
+                <div class="w-full md:w-3/4 space-y-4">
+                  <h2 class="text-2xl font-bold text-blue-900">Dr. Meera Verma</h2>
+                  <p class="text-base font-medium">MBBS, MDS - Prosthodontics</p>
+                  <p class="text-base">Dental Surgeon, Special Interest in Cosmetic Dentistry</p>
+          
+                  <!-- Glassmorphic Text Area -->
+                  <div class="relative text-black rounded-sm p-4 backdrop-blur-lg shadow-sm border border-white/20 ring-1 ring-white/10"
+                  style="background: transparent;">
+
+                  <!-- Top Left Horizontal Line -->
+                  <span class="absolute top-0 left-0 h-1 w-24"
+                      style="background: linear-gradient(to right, #1e3a8a, #2563eb);"></span>
+
+                  <!-- Bottom Right Horizontal Line -->
+                  <span class="absolute bottom-0 right-0 h-1 w-24"
+                      style="background: linear-gradient(to left, #1e3a8a, #2563eb);"></span>
+
+                  Dr. Meera Verma is a passionate dental professional currently practicing at SmileCare Dental
+                  Studio, Delhi.
+                  She has over 12 years of experience and specializes in smile makeovers, implants, and
+                  aesthetic restorations.
+                  She believes in providing painless treatments with a patient-centric approach. Dr. Verma is
+                  known for her
+                  gentle handling and clear communication, ensuring each patient feels at ease during every
+                  visit.
+              </div>
+
+
+          
+                  <!-- Sub Sections -->
+                  <div class="flex flex-col md:flex-row justify-between gap-6 mt-4">
+          
+                    <!-- Personal Info -->
+                    <div class="flex-1 space-y-2">
+                      <h3 class="text-lg font-semibold text-blue-600 mb-2">Personal Information</h3>
+                      <p class="flex items-center gap-2"><i class="fas fa-envelope text-blue-900"></i> meeraverma.dental@gmail.com</p>
+                      <p class="flex items-center gap-2"><i class="fas fa-phone text-blue-900"></i> +91 9876543210</p>
+                      <p>Female</p>
+                      <p>12 April 1985</p>
+                      <p>A-25, Saraswati Vihar, Pitampura, New Delhi - 110034, India</p>
+                    </div>
+          
+                    <!-- Experience Info -->
+                    <div class="flex-1 space-y-2">
+                      <h3 class="text-lg font-semibold text-blue-600 mb-2">Experience</h3>
+                      <p>SmileCare Dental Studio</p>
+                      <p>Senior Prosthodontist</p>
+                      <p><span class="font-semibold text-blue-800">Mon - Sat:</span> 10:00 AM – 6:00 PM</p>
+                      <p><span class="font-semibold text-blue-800">₹500 Consultation Fee</span></p>
+                    </div>
+          
+                  </div>
+          
+                  <!-- Button -->
+                  <button
+                    class="mt-4 px-5 py-2 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                    Book Appointment
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+        <section class="bg-white shadow-md border border-gray-200 px-6 py-10">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-6">
+
+                <!-- Left: Clinic Info -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h3 class="text-xl font-semibold text-blue-800">SmileCare Dental Studio</h3>
+
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-green-600 font-semibold text-sm">4.5</span>
+                        <div class="flex gap-1 text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+
+
+                    <!-- 📞 Contact Info -->
+                    <div class="text-sm text-gray-700 space-y-1 mt-0">
+                        <p class="text-sm text-gray-600 mb-0">
+                            A-25, Saraswati Vihar, Pitampura, New Delhi - 110034
+                        </p>
+                        <p class="flex items-center gap-1.5">
+                            <i class="fas fa-phone text-blue-900"></i> +91 9876543210
+                        </p>
+                        <p>
+                            <span class="font-semibold text-blue-800">Mon - Sat:</span> 10:00 AM – 6:00 PM
+                        </p>
+                    </div>
+
+
+
+
+
+                    <!-- Carousel -->
+                    <div class="flex overflow-x-auto gap-4 scrollbar-thin scrollbar-thumb-blue-300 pb-2 mt-2">
+                        <img src="./../assest/smile-bright-dental-clinic.avif" alt="Clinic 1"
+                            class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200" />
+                        <img src="./../assest/Healing Touch Multispeciality Hospital.webp" alt="Clinic 2"
+                            class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200" />
+                        <img src="./../assest/CityCare Clinic.jpeg" alt="Clinic 3"
+                            class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200" />
+                        <div
+                            class="h-24 w-36 flex items-center justify-center bg-blue-900 text-white font-semibold text-sm rounded shadow">
+                            +12 More
+                        </div>
+                    </div>
+
+                    <!-- Info Box -->
+                    <div class="bg-blue-50 text-sm text-gray-700 p-4 rounded border border-blue-100">
+                        Kalope Dental takes the step in improving patient-centered dental care. Certified and trusted by
+                        thousands.
+                        <a href="#" class="text-blue-600 hover:underline font-medium">Click here</a> to know more.
+                    </div>
+                </div>
+
+                <!-- Right: Location Map Section -->
+                <div class="bg-blue-100 rounded-md p-4 shadow-sm">
+                    <h4 class="text-lg font-semibold text-blue-700 mb-3">Clinic Location</h4>
+                    <p class="text-sm text-gray-700 mb-2">Easily accessible clinic in the heart of Pitampura, New Delhi.
+                    </p>
+
+                    <div class="w-full max-w-full h-56 overflow-hidden rounded-md border shadow-md">
+                        <iframe class="w-full h-full"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7004.400090561027!2d77.11717519379883!3d28.698991753037985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02d3723f574f%3A0x7e1f9c18104f26f1!2sSaraswati%20Vihar%2C%20Pitampura%2C%20New%20Delhi%2C%20Delhi%20110034!5e0!3m2!1sen!2sin!4v1715530980000!5m2!1sen!2sin"
+                            frameborder="0" style="border:0;" allowfullscreen loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-900 px-6 py-10">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-700">Patient Reviews</h3>
+                <div class="space-y-6">
+                    <div class="bg-white p-4 rounded-md shadow">
+                        <p class="text-sm">"Dr. Sharma is very kind and professional. She explained my dental issues
+                            clearly and treated them effectively."</p>
+                        <p class="text-xs text-gray-500 mt-2">- Radha Verma</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-md shadow">
+                        <p class="text-sm">"Clean clinic and very polite staff. I’ll definitely come back for follow-up
+                            treatment."</p>
+                        <p class="text-xs text-gray-500 mt-2">- Amit Singh</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <footer class="bg-gradient-to-br from-[#050505] via-[#0c1a2e] to-[#08112E] text-blue-100 py-12">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h2 class="font-bold text-xl mb-4">Kalope Dental</h2>
+                    <p>Your trusted platform for exploring dental care services and booking appointments with verified
+                        hospitals and clinics.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Explore</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">Find Clinics</a></li>
+                        <li><a href="#" class="hover:underline">Video Consult</a></li>
+                        <li><a href="#" class="hover:underline">Cities</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Help</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Contact</h3>
+                    <p>Email: support@kalopedental.com</p>
+                    <p>Phone: +91-98765-43210</p>
+                </div>
+            </div>
+            <div class="text-center mt-10 text-sm text-blue-200">&copy; 2025 Kalope Dental. All rights reserved.</div>
+        </footer>
+
+
+        <script src="./searchdetailpage.js"></script>
+</body>
+
+</html>

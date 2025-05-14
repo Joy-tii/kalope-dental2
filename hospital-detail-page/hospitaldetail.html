@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalope Dental - search Details Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-pE+YFn8W+Yt1qV... (truncated)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./hospitaldetail.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="text-white">
+
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="./assest/hero-image.png" class="w-full h-full object-cover object-right z-0" />
+        <div class="absolute inset-0 bg-gradient-custom z-10"></div>
+    </div>
+
+    <!-- Foreground Content -->
+    <div class="relative z-20">
+
+        <!-- Fixed Navbar -->
+        <header
+            class="bg-gradient-header fixed top-0 left-0 right-0 z-50 shadow-md w-full h-[80px] px-4 sm:px-6 md:px-8 flex items-center justify-between">
+
+            <!-- Brand -->
+            <h1 class="text-xl sm:text-2xl font-bold text-white whitespace-nowrap flex-shrink-0">
+                Kalope Dental
+            </h1>
+
+            <!-- Centered Search Bar (Desktop only) -->
+            <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
+                <div class="flex items-center space-x-2">
+                    <input type="text" placeholder="Search doctors, clinics and hospitals"
+                        class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+                        focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+                    <button
+                        class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                        </svg>
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="ml-auto flex items-center space-x-4">
+                <!-- Desktop Sign Up -->
+                <a href="#" class="hidden md:inline-block px-4 py-1 font-semibold text-blue-700 bg-white rounded-sm transition-all duration-300 ease-in-out
+                    hover:text-white hover:bg-blue-600/10 hover:backdrop-blur-md
+                    hover:border hover:border-blue-500 hover:shadow-[0_0_8px_rgba(50,80,120,0.2)]
+                    border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    Sign Up
+                </a>
+
+                <!-- Hamburger (Mobile only) -->
+                <button id="hamburger-btn" class="md:hidden text-white text-2xl p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden flex-col bg-white text-gray-900 w-full px-4 py-4 space-y-3 shadow-md">
+            <a href="#" class="block font-semibold hover:text-blue-600">Home</a>
+            <a href="#" class="block font-semibold hover:text-blue-600">About</a>
+            <a href="#"
+                class="block font-semibold text-white bg-blue-600 px-4 py-2 rounded-sm text-center hover:bg-blue-700 transition">
+                Sign Up
+            </a>
+        </div>
+
+        <!-- ✅ Search Bar for Mobile & Tablet (Below Navbar) -->
+        <div class="block lg:hidden fixed top-[80px] left-0 right-0 bg-gradient-header z-40 px-4 py-3 shadow-md">
+            <div class="flex items-center space-x-2 w-full max-w-md mx-auto">
+                <input type="text" placeholder="Search doctors, clinics and hospitals"
+                    class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+                    focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+                <button
+                    class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                    </svg>
+                    <span>Search</span>
+                </button>
+            </div>
+        </div>
+
+
+
+        <section class="bg-white px-4 sm:px-6 py-10 text-gray-900 z-30 mt-[140px] sm:mt-[140px] lg:mt-[100px]">
+
+
+            <div class="max-w-6xl mx-auto rounded-sm shadow-md p-6 bg-gradient-to-br from-blue-100 to-white">
+                <div class="flex flex-col md:flex-row gap-8">
+
+                    <!-- Hospital Image -->
+                    <div class="w-full md:w-1/4 relative">
+                        <img src="./../assest/Healing Touch Multispeciality Hospital.webp" alt="Apollo Hospitals"
+                            class="rounded-sm object-contain md:object-cover object-center w-full h-60 md:h-72 border" />
+                        <!-- Highlighted Info below image -->
+                        <div class="bg-blue-900 text-white text-center text-sm font-medium py-2 mt-2 rounded-sm">
+                            200 Beds • 58 Doctors
+                        </div>
+                    </div>
+
+                    <!-- Hospital Info -->
+                    <div class="w-full md:w-3/4 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <h2 class="text-2xl font-bold text-blue-900">Apollo Hospitals</h2>
+                            <p class="text-base font-medium">Multi-Speciality Hospital</p>
+                            <p class="text-base text-gray-700">Located in
+                                <span class="font-semibold text-blue-800">Seshadripuram, Bangalore</span>
+                            </p>
+
+                            <!-- Details Grid -->
+                            <div class="grid md:grid-cols-2 gap-8 mt-4">
+                                <!-- Left Column -->
+                                <div class="space-y-2">
+                                    <p><span class="font-semibold text-blue-700">Registration No.:</span> REG-FR-2033
+                                    </p>
+                                    <p><span class="font-semibold text-blue-700">Accreditation:</span> NABH</p>
+                                    <p><span class="font-semibold text-blue-700">Established:</span> 2002</p>
+                                    <p><span class="font-semibold text-blue-700">License No.:</span> LIC-FG-9823</p>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="space-y-2">
+                                    <p><span class="font-semibold text-blue-800">Mon - Sat:</span> 10:00 AM – 6:00 PM
+                                    </p>
+                                    <p><span class="font-semibold text-blue-700">Emergency:</span>
+                                        <span class="text-green-700 font-semibold">24x7 Available</span>
+                                    </p>
+                                    <p><span class="font-semibold text-blue-700">Medical Equipment:</span> MRI, CT Scan,
+                                        Ventilators</p>
+                                    <p><span class="font-semibold text-blue-700">Bed Capacity:</span> 200 Beds</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ✅ Buttons: Center on small screens -->
+                        <div
+                            class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center md:items-start mt-6">
+                            <button
+                                class="w-48 px-5 py-2 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center justify-center space-x-2">
+                                <i class="fas fa-phone text-white"></i> <span>Call Now</span>
+                            </button>
+                            <button
+                                class="w-48 bg-white border border-blue-700 text-blue-700 px-4 py-2 rounded-sm hover:bg-blue-50 transition text-sm font-medium flex items-center justify-center space-x-2">
+                                <i class="fas fa-calendar-alt text-blue-700"></i> <span>Book Appointment</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Departments Section -->
+        <section class="bg-white py-10 rounded-sm px-6 ">
+            <div class="max-w-6xl mx-auto ">
+                <h3 class="text-lg font-bold text-blue-800 mb-6">Departments</h3>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    <!-- Department Item -->
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="./../assest/Cardiology.jpeg" alt="Cardiology" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Cardiology</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Neurology.jpeg" alt="Neurology" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Neurology</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Orthopedics.jpeg" alt="Orthopedics" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Orthopedics</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Pediatrics.jpeg" alt="Pediatrics" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Pediatrics</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Dermatology.jpeg" alt="Dermatology" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Dermatology</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Urology.jpeg" alt="Urology" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Urology</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Gastroenterology.jpeg" alt="Gastroenterology"
+                            class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Gastroenterology</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="./../assest/ENT.jpeg" alt="ENT" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">ENT</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Ophthalmology.jpeg" alt="Ophthalmology"
+                            class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Ophthalmology</span>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center border border-blue-200 rounded-sm p-2">
+                        <img src="../assest/Oncology.jpeg" alt="Oncology" class="w-24 h-16 object-contain mb-2">
+                        <span class="text-sm font-medium text-blue-900">Oncology</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Services Offered Section -->
+        <section class=" px-6 py-10  rounded-sm">
+            <h3 class="text-lg font-bold text-blue-800 mb-6 max-w-6xl mx-auto">Services Offered</h3>
+            <div class="bg-blue-50 max-w-6xl mx-auto space-y-6 px-6 py-6">
+               
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Service Card 1 -->
+                    <div
+                        class="bg-white rounded-sm p-4 flex flex-col items-center text-center shadow-md hover:shadow-lg transition">
+                        <i class="fas fa-vial text-blue-800 text-2xl mb-3"></i>
+                        <span class="text-sm font-semibold text-gray-800">Lab Testing</span>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div
+                        class="bg-white rounded-sm p-4 flex flex-col items-center text-center shadow-md hover:shadow-lg transition">
+                        <i class="fas fa-ambulance text-blue-800 text-2xl mb-3"></i>
+                        <span class="text-sm font-semibold text-gray-800">Emergency Services</span>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div
+                        class="bg-white rounded-sm p-4 flex flex-col items-center text-center shadow-md hover:shadow-lg transition">
+                        <i class="fas fa-microscope text-blue-800 text-2xl mb-3"></i>
+                        <span class="text-sm font-semibold text-gray-800">Diagnostics</span>
+                    </div>
+
+                    <!-- Service Card 4 (New) -->
+                    <div
+                        class="bg-white rounded-sm p-4 flex flex-col items-center text-center shadow-md hover:shadow-lg transition">
+                        <i class="fas fa-user-nurse text-blue-800 text-2xl mb-3"></i>
+                        <span class="text-sm font-semibold text-gray-800">Nursing Care</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="bg-white px-6 py-10  ">
+            <div class="max-w-6xl mx-auto space-y-10">
+
+                <!-- 🔹 Top Two Column Layout -->
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- 🔹 Left Column (60%) -->
+                    <div class="md:w-3/5 space-y-4">
+                        <!-- Title -->
+                        <h2 class="text-2xl font-bold text-blue-800">About Apollo Hospital</h2>
+
+                        <!-- ⭐ Ratings -->
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-600 font-semibold text-sm">4.3</span>
+                            <div class="flex gap-1 text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm">(112 ratings)</span>
+                        </div>
+
+                        <!-- 📍 Address + Contact -->
+                        <div class="text-sm text-gray-700 space-y-1">
+                            <p class="text-gray-600">
+                                Apollo Hospitals, 251/4, Opp. IISC, 18th Cross, Seshadripuram, Bangalore, Karnataka –
+                                560020
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="fas fa-phone text-blue-900"></i> +91 9876543210
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="fas fa-envelope text-blue-900"></i> info@apollohospitals.com
+                            </p>
+                            <p class="flex items-center gap-2">
+                                <i class="fas fa-globe text-blue-900"></i>
+                                <a href="https://www.apollohospitals.com" target="_blank"
+                                    class="text-blue-600 underline">www.apollohospitals.com</a>
+                            </p>
+                            <p>
+                                <span class="font-semibold text-blue-800">Mon - Sat:</span> 9:00 AM – 6:00 PM
+                            </p>
+                        </div>
+
+                        <!-- 🖼️ Carousel -->
+                        <div class="flex overflow-x-auto gap-4 scrollbar-thin scrollbar-thumb-blue-300">
+                            <!-- Image 1: Always visible -->
+                            <img src="./../assest/apollo-hospital.jpeg" alt="Clinic 1"
+                              class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200 cursor-pointer" onclick="openModal(0)" />
+                          
+                            <!-- Image 2: Hidden on very small screens -->
+                            <img src="./../assest/Healing Touch Multispeciality Hospital.webp" alt="Clinic 2"
+                              class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200 cursor-pointer hidden sm:block" onclick="openModal(1)" />
+                          
+                            <!-- Image 3: Only visible on md and above -->
+                            <img src="./../assest/apollo-hospital.jpeg" alt="Clinic 3"
+                              class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200 cursor-pointer hidden md:block" onclick="openModal(2)" />
+                          
+                            <!-- "+X More" Container: Always visible, responsive with flex -->
+                            <div id="moreImagesContainer"
+                              class="h-24 w-36 relative rounded shadow cursor-pointer overflow-hidden flex-shrink-0"
+                              onclick="openModal(3)">
+                              <img src="./../assest/doctor3.jpeg" alt="+More" class="h-full w-full object-cover" />
+                              <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center">
+                                <span id="moreImageCount" class="text-white font-semibold text-sm">+X More</span>
+                              </div>
+                            </div>
+                          </div>
+                          
+
+
+                    </div>
+
+                    <!-- 🔹 Right Column (40%) - Location Map -->
+                    <div class="md:w-2/5">
+                        <div class="bg-blue-100 rounded-md p-4 shadow-sm h-full flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-lg font-semibold text-blue-700 mb-1">Clinic Location</h4>
+                                <p class="text-sm text-gray-700">Easily accessible clinic in the heart of Pitampura, New
+                                    Delhi.</p>
+                            </div>
+                            <div class="w-full h-[260px] overflow-hidden rounded-md border shadow-md mt-4">
+                                <iframe class="w-full h-full"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.820379056348!2d77.5718316696135!3d13.00573939994307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae16866c3679f3%3A0xe51f65b9356f11e!2sApollo%20Hospitals%2C%20Seshadripuram!5e0!3m2!1sen!2sin!4v1715587055569!5m2!1sen!2sin"
+                                    frameborder="0" allowfullscreen loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 👨‍⚕️ About Apollo Section -->
+                <div class="relative text-black rounded-sm p-4 backdrop-blur-lg shadow-sm border border-white/20 ring-1 ring-white/10"
+                    style="background: transparent;">
+                    <span class="absolute top-0 left-0 h-1 w-24 bg-gradient-to-r from-blue-900 to-blue-600"></span>
+                    <span class="absolute bottom-0 right-0 h-1 w-24 bg-gradient-to-l from-blue-900 to-blue-600"></span>
+
+                    <p class="text-sm">
+                        Apollo Hospitals is one of India's premier healthcare institutions, known for pioneering private
+                        healthcare excellence. With state-of-the-art infrastructure, internationally trained
+                        specialists, and advanced diagnostic and treatment technologies, Apollo provides compassionate
+                        and affordable care across multiple specialties. Their vision includes making world-class
+                        healthcare accessible to all while driving innovation and research to transform lives.
+                    </p>
+                </div>
+
+                <!-- 💸 Financial Information -->
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Financial Information</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <div
+                            class="flex flex-col items-center bg-gray-50 p-4 rounded shadow-sm border border-gray-200 text-center">
+                            <i class="fas fa-rupee-sign text-blue-700 text-xl mb-2"></i>
+                            <p class="font-semibold text-gray-800">Annual Revenue</p>
+                            <p class="text-gray-600">₹550 Crore</p>
+                        </div>
+                        <div
+                            class="flex flex-col items-center bg-gray-50 p-4 rounded shadow-sm border border-gray-200 text-center">
+                            <i class="fas fa-hand-holding-usd text-blue-700 text-xl mb-2"></i>
+                            <p class="font-semibold text-gray-800">Hospital Funding</p>
+                            <p class="text-gray-600">₹800 Crore</p>
+                        </div>
+                        <div
+                            class="flex flex-col items-center bg-gray-50 p-4 rounded shadow-sm border border-gray-200 text-center">
+                            <i class="fas fa-wallet text-blue-700 text-xl mb-2"></i>
+                            <p class="font-semibold text-gray-800">Payment Modes</p>
+                            <p class="text-gray-600">Cash, Card, UPI, Insurance</p>
+                        </div>
+                        <div
+                            class="flex flex-col items-center bg-gray-50 p-4 rounded shadow-sm border border-gray-200 text-center">
+                            <i class="fas fa-clipboard-list text-blue-700 text-xl mb-2"></i>
+                            <p class="font-semibold text-gray-800">Govt. Schemes</p>
+                            <p class="text-gray-600">Ayushman Bharat, PMJAY</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🔚 Learn More -->
+                <div class="bg-blue-50 text-sm text-gray-700 p-4 rounded border border-blue-100">
+                    Apollo Hospitals is a leading multi-specialty hospital known for advanced medical infrastructure and
+                    patient-centric care.
+                    <a href="#" class="text-blue-600 hover:underline font-medium">Learn more</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 🖼️ Image Modal Popup -->
+        <div id="imageModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center">
+            <!-- 🛠 Add id="modalContent" here -->
+            <div id="modalContent" class="relative bg-white rounded-sm max-w-3xl w-full p-4 shadow-lg">
+                <!-- Close Button -->
+                <button onclick="closeModal()"
+                    class="absolute top-2 right-3 text-gray-700 text-2xl hover:text-red-500">&times;</button>
+
+                <!-- Carousel Container -->
+                <div class="relative">
+                    <img id="modalImage" src="" alt="Preview" class="w-full h-80 object-contain rounded-md" />
+
+                    <button onclick="prevImage()"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-blue-200">
+                        <i class="fas fa-chevron-left text-blue-900 text-xl"></i>
+                    </button>
+
+                    <button onclick="nextImage()"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-blue-200">
+                        <i class="fas fa-chevron-right text-blue-900 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <section class="bg-white px-6 py-10 shadow-md  mt-6">
+            <div class="max-w-6xl mx-auto space-y-6">
+
+                <!-- Section Title -->
+                <h2 class="text-2xl font-bold text-blue-800 pb-2">
+                    Doctors in Apollo Hospital
+                </h2>
+
+                <!-- Doctor Card -->
+                <div class="border-t border-gray-300 pt-6">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between">
+
+                        <!-- Left section -->
+                        <div class="flex flex-col sm:flex-row gap-6 w-full md:w-3/4">
+
+                            <!-- Doctor Image -->
+                            <img src="./../assest/doctor3.jpeg" alt="Doctor"
+                                class="w-full sm:w-[30%] h-auto object-cover rounded-md self-stretch">
+
+                            <!-- Textual details -->
+                            <div class="flex flex-col justify-start space-y-2 w-full sm:w-[65%]">
+                                <h3 class="text-lg font-semibold text-blue-800">Dr. Ravishankar Reddy C R</h3>
+                                <p class="text-sm font-semibold text-gray-700">Koramangala 1 Block, Bangalore</p>
+                                <p class="text-sm text-gray-600">General Physician (Special Interest in Diabetology)</p>
+                                <p class="text-sm text-gray-600">32 years experience</p>
+                                <p class="text-sm text-gray-600">
+                                    Consultation Fees: <span class="font-semibold text-gray-800">₹500</span>
+                                </p>
+                                <span class="text-green-600 text-sm font-medium">Available Today</span>
+                                <div class="flex items-center gap-2 text-sm text-gray-700">
+                                    <i class="fas fa-thumbs-up text-blue-900 text-base"></i>
+                                    <span class="font-semibold text-blue-900">95%</span>
+                                    <span class="ml-3 text-gray-500">(1,205 Patient Stories)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right section (Buttons) -->
+                        <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
+                            <div class="flex flex-col gap-2 w-full sm:w-auto items-center sm:items-end">
+                                <button
+                                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 w-48 rounded-sm hover:bg-blue-600 transition">
+                                    Book Clinic Visit
+                                </button>
+                                <button
+                                    class="border border-blue-700 text-blue-700 px-4 py-2 w-48 rounded-sm hover:bg-blue-50 transition">
+                                    Contact Hospital
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Doctor Card -->
+                <div class="border-t border-gray-300 pt-6">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between">
+
+                        <!-- Left section -->
+                        <div class="flex flex-col sm:flex-row gap-6 w-full md:w-3/4">
+
+                            <!-- Doctor Image -->
+                            <img src="./../assest/doctor2.jpeg" alt="Doctor"
+                                class="w-full sm:w-[30%] h-auto object-cover rounded-md self-stretch">
+
+                            <!-- Textual details -->
+                            <div class="flex flex-col justify-start space-y-2 w-full sm:w-[65%]">
+                                <h3 class="text-lg font-semibold text-blue-800">Dr. Ravishankar Reddy C R</h3>
+                                <p class="text-sm font-semibold text-gray-700">Koramangala 1 Block, Bangalore</p>
+                                <p class="text-sm text-gray-600">General Physician (Special Interest in Diabetology)</p>
+                                <p class="text-sm text-gray-600">32 years experience</p>
+                                <p class="text-sm text-gray-600">
+                                    Consultation Fees: <span class="font-semibold text-gray-800">₹500</span>
+                                </p>
+                                <span class="text-green-600 text-sm font-medium">Available Today</span>
+                                <div class="flex items-center gap-2 text-sm text-gray-700">
+                                    <i class="fas fa-thumbs-up text-blue-900 text-base"></i>
+                                    <span class="font-semibold text-blue-900">95%</span>
+                                    <span class="ml-3 text-gray-500">(1,205 Patient Stories)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right section (Buttons) -->
+                        <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
+                            <div class="flex flex-col gap-2 w-full sm:w-auto items-center sm:items-end">
+                                <button
+                                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 w-48 rounded-sm hover:bg-blue-600 transition">
+                                    Book Clinic Visit
+                                </button>
+                                <button
+                                    class="border border-blue-700 text-blue-700 px-4 py-2 w-48 rounded-sm hover:bg-blue-50 transition">
+                                    Contact Hospital
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Doctor Card -->
+                <div class="border-t border-gray-300 pt-6">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between">
+
+                        <!-- Left section -->
+                        <div class="flex flex-col sm:flex-row gap-6 w-full md:w-3/4">
+
+                            <!-- Doctor Image -->
+                            <img src="./../assest/doctor1.jpeg" alt="Doctor"
+                                class="w-full sm:w-[30%] h-auto object-cover rounded-md self-stretch">
+
+                            <!-- Textual details -->
+                            <div class="flex flex-col justify-start space-y-2 w-full sm:w-[65%]">
+                                <h3 class="text-lg font-semibold text-blue-800">Dr. Ravishankar Reddy C R</h3>
+                                <p class="text-sm font-semibold text-gray-700">Koramangala 1 Block, Bangalore</p>
+                                <p class="text-sm text-gray-600">General Physician (Special Interest in Diabetology)</p>
+                                <p class="text-sm text-gray-600">32 years experience</p>
+                                <p class="text-sm text-gray-600">
+                                    Consultation Fees: <span class="font-semibold text-gray-800">₹500</span>
+                                </p>
+                                <span class="text-green-600 text-sm font-medium">Available Today</span>
+                                <div class="flex items-center gap-2 text-sm text-gray-700">
+                                    <i class="fas fa-thumbs-up text-blue-900 text-base"></i>
+                                    <span class="font-semibold text-blue-900">95%</span>
+                                    <span class="ml-3 text-gray-500">(1,205 Patient Stories)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right section (Buttons) -->
+                        <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
+                            <div class="flex flex-col gap-2 w-full sm:w-auto items-center sm:items-end">
+                                <button
+                                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 w-48 rounded-sm hover:bg-blue-600 transition">
+                                    Book Clinic Visit
+                                </button>
+                                <button
+                                    class="border border-blue-700 text-blue-700 px-4 py-2 w-48 rounded-sm hover:bg-blue-50 transition">
+                                    Contact Hospital
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Doctor Card -->
+                <div class="border-t border-gray-300 pt-6">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between">
+
+                        <!-- Left section -->
+                        <div class="flex flex-col sm:flex-row gap-6 w-full md:w-3/4">
+
+                            <!-- Doctor Image -->
+                            <img src="./../assest/doctor3.jpeg" alt="Doctor"
+                                class="w-full sm:w-[30%] h-auto object-cover rounded-md self-stretch">
+
+                            <!-- Textual details -->
+                            <div class="flex flex-col justify-start space-y-2 w-full sm:w-[65%]">
+                                <h3 class="text-lg font-semibold text-blue-800">Dr. Ravishankar Reddy C R</h3>
+                                <p class="text-sm font-semibold text-gray-700">Koramangala 1 Block, Bangalore</p>
+                                <p class="text-sm text-gray-600">General Physician (Special Interest in Diabetology)</p>
+                                <p class="text-sm text-gray-600">32 years experience</p>
+                                <p class="text-sm text-gray-600">
+                                    Consultation Fees: <span class="font-semibold text-gray-800">₹500</span>
+                                </p>
+                                <span class="text-green-600 text-sm font-medium">Available Today</span>
+                                <div class="flex items-center gap-2 text-sm text-gray-700">
+                                    <i class="fas fa-thumbs-up text-blue-900 text-base"></i>
+                                    <span class="font-semibold text-blue-900">95%</span>
+                                    <span class="ml-3 text-gray-500">(1,205 Patient Stories)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right section (Buttons) -->
+                        <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
+                            <div class="flex flex-col gap-2 w-full sm:w-auto items-center sm:items-end">
+                                <button
+                                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 w-48 rounded-sm hover:bg-blue-600 transition">
+                                    Book Clinic Visit
+                                </button>
+                                <button
+                                    class="border border-blue-700 text-blue-700 px-4 py-2 w-48 rounded-sm hover:bg-blue-50 transition">
+                                    Contact Hospital
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Doctor Card -->
+                <div class="border-t border-gray-300 pt-6">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between">
+
+                        <!-- Left section -->
+                        <div class="flex flex-col sm:flex-row gap-6 w-full md:w-3/4">
+
+                            <!-- Doctor Image -->
+                            <img src="./../assest/doctor2.jpeg" alt="Doctor"
+                                class="w-full sm:w-[30%] h-auto object-cover rounded-md self-stretch">
+
+                            <!-- Textual details -->
+                            <div class="flex flex-col justify-start space-y-2 w-full sm:w-[65%]">
+                                <h3 class="text-lg font-semibold text-blue-800">Dr. Ravishankar Reddy C R</h3>
+                                <p class="text-sm font-semibold text-gray-700">Koramangala 1 Block, Bangalore</p>
+                                <p class="text-sm text-gray-600">General Physician (Special Interest in Diabetology)</p>
+                                <p class="text-sm text-gray-600">32 years experience</p>
+                                <p class="text-sm text-gray-600">
+                                    Consultation Fees: <span class="font-semibold text-gray-800">₹500</span>
+                                </p>
+                                <span class="text-green-600 text-sm font-medium">Available Today</span>
+                                <div class="flex items-center gap-2 text-sm text-gray-700">
+                                    <i class="fas fa-thumbs-up text-blue-900 text-base"></i>
+                                    <span class="font-semibold text-blue-900">95%</span>
+                                    <span class="ml-3 text-gray-500">(1,205 Patient Stories)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right section (Buttons) -->
+                        <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
+                            <div class="flex flex-col gap-2 w-full sm:w-auto items-center sm:items-end">
+                                <button
+                                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 w-48 rounded-sm hover:bg-blue-600 transition">
+                                    Book Clinic Visit
+                                </button>
+                                <button
+                                    class="border border-blue-700 text-blue-700 px-4 py-2 w-48 rounded-sm hover:bg-blue-50 transition">
+                                    Contact Hospital
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Doctor Card -->
+                <div class="border-t border-gray-300 pt-6">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between">
+
+                        <!-- Left section -->
+                        <div class="flex flex-col sm:flex-row gap-6 w-full md:w-3/4">
+
+                            <!-- Doctor Image -->
+                            <img src="./../assest/doctor1.jpeg" alt="Doctor"
+                                class="w-full sm:w-[30%] h-auto object-cover rounded-md self-stretch">
+
+                            <!-- Textual details -->
+                            <div class="flex flex-col justify-start space-y-2 w-full sm:w-[65%]">
+                                <h3 class="text-lg font-semibold text-blue-800">Dr. Ravishankar Reddy C R</h3>
+                                <p class="text-sm font-semibold text-gray-700">Koramangala 1 Block, Bangalore</p>
+                                <p class="text-sm text-gray-600">General Physician (Special Interest in Diabetology)</p>
+                                <p class="text-sm text-gray-600">32 years experience</p>
+                                <p class="text-sm text-gray-600">
+                                    Consultation Fees: <span class="font-semibold text-gray-800">₹500</span>
+                                </p>
+                                <span class="text-green-600 text-sm font-medium">Available Today</span>
+                                <div class="flex items-center gap-2 text-sm text-gray-700">
+                                    <i class="fas fa-thumbs-up text-blue-900 text-base"></i>
+                                    <span class="font-semibold text-blue-900">95%</span>
+                                    <span class="ml-3 text-gray-500">(1,205 Patient Stories)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right section (Buttons) -->
+                        <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
+                            <div class="flex flex-col gap-2 w-full sm:w-auto items-center sm:items-end">
+                                <button
+                                    class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-2 w-48 rounded-sm hover:bg-blue-600 transition">
+                                    Book Clinic Visit
+                                </button>
+                                <button
+                                    class="border border-blue-700 text-blue-700 px-4 py-2 w-48 rounded-sm hover:bg-blue-50 transition">
+                                    Contact Hospital
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <footer class="bg-gradient-to-br from-[#050505] via-[#0c1a2e] to-[#08112E] text-blue-100 py-12">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h2 class="font-bold text-xl mb-4">Kalope Dental</h2>
+                    <p>Your trusted platform for exploring dental care services and booking appointments with verified
+                        hospitals and clinics.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Explore</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">Find Clinics</a></li>
+                        <li><a href="#" class="hover:underline">Video Consult</a></li>
+                        <li><a href="#" class="hover:underline">Cities</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Help</h3>
+                    <ul class="space-y-1">
+                        <li><a href="#" class="hover:underline">FAQs</a></li>
+                        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-2">Contact</h3>
+                    <p>Email: support@kalopedental.com</p>
+                    <p>Phone: +91-98765-43210</p>
+                </div>
+            </div>
+            <div class="text-center mt-10 text-sm text-blue-200">&copy; 2025 Kalope Dental. All rights reserved.</div>
+        </footer>
+        <script src="./hospitaldetail.js"></script>
+</body>
+
+</html>

@@ -17,32 +17,32 @@
 
     <!-- Background Image Layer -->
     <div class="absolute inset-0 w-full h-full">
-        <img src="./assest/hero-image.png" class="w-full h-full object-cover object-right z-0" />
+        <img src="./assets/hero-image.png" class="w-full h-full object-cover object-right z-0" />
         <div class="absolute inset-0 bg-gradient-custom z-10"></div>
     </div>
 
     <!-- Foreground Content -->
     <div class="relative z-20">
 
-        <!-- Fixed Navbar (No opacity) -->
-        <header class="bg-gradient-header fixed top-0 left-0 right-0 z-50 shadow-md w-full h-[80px] px-4 sm:px-6 md:px-8 flex items-center justify-between">
+        <!-- Fixed Navbar -->
+        <header
+            class="bg-gradient-header fixed top-0 left-0 right-0 z-50 shadow-md w-full h-[80px] px-4 sm:px-6 md:px-8 flex items-center justify-between">
 
             <!-- Brand -->
             <h1 class="text-xl sm:text-2xl font-bold text-white whitespace-nowrap flex-shrink-0">
                 Kalope Dental
             </h1>
-        
-            <!-- Centered Search Bar (on desktop only) -->
-            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
+
+            <!-- Centered Search Bar (Desktop only) -->
+            <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
                 <div class="flex items-center space-x-2">
                     <input type="text" placeholder="Search doctors, clinics and hospitals"
                         class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
                         focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
-        
                     <button
                         class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
                         </svg>
@@ -50,57 +50,52 @@
                     </button>
                 </div>
             </div>
-        
-            <!-- Right Side (Desktop Sign Up & Hamburger) -->
+
+            <!-- Right Side -->
             <div class="ml-auto flex items-center space-x-4">
-                <!-- ✅ Desktop Only Sign Up -->
-                <a href="#"
-                    class="hidden md:inline-block px-4 py-1 font-semibold text-blue-700 bg-white rounded-sm transition-all duration-300 ease-in-out
+                <!-- Desktop Sign Up -->
+                <a href="#" class="hidden md:inline-block px-4 py-1 font-semibold text-blue-700 bg-white rounded-sm transition-all duration-300 ease-in-out
                     hover:text-white hover:bg-blue-600/10 hover:backdrop-blur-md
                     hover:border hover:border-blue-500 hover:shadow-[0_0_8px_rgba(50,80,120,0.2)]
                     border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400">
                     Sign Up
                 </a>
-        
-                <!-- Hamburger Icon (Mobile only) -->
+
+                <!-- Hamburger (Mobile only) -->
                 <button id="hamburger-btn" class="md:hidden text-white text-2xl p-2">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </header>
-        
-        <!-- ✅ Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="md:hidden hidden flex-col bg-white text-gray-900 w-full px-4 py-4 space-y-3 shadow-md">
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden flex-col bg-white text-gray-900 w-full px-4 py-4 space-y-3 shadow-md">
             <a href="#" class="block font-semibold hover:text-blue-600">Home</a>
             <a href="#" class="block font-semibold hover:text-blue-600">About</a>
-            
-            <!-- ✅ Mobile Only Sign Up -->
-            <a href="#" class="block font-semibold text-white bg-blue-600 px-4 py-2 rounded-sm text-center hover:bg-blue-700 transition">
+            <a href="#"
+                class="block font-semibold text-white bg-blue-600 px-4 py-2 rounded-sm text-center hover:bg-blue-700 transition">
                 Sign Up
             </a>
         </div>
 
-
-<!-- Only visible on small screens -->
-<div class="block md:hidden px-4 pt-[90px] pb-4 bg-gradient-header z-40">
-    <div class="flex items-center space-x-2 w-full max-w-md mx-auto">
-        <input type="text" placeholder="Search doctors, clinics and hospitals"
-            class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
-            focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
-
-        <button
-            class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
-            </svg>
-            <span>Search</span>
-        </button>
-    </div>
-
-
-</div>
+        <!-- ✅ Search Bar for Mobile & Tablet (Below Navbar) -->
+        <div class="block lg:hidden fixed top-[80px] left-0 right-0 bg-gradient-header z-40 px-4 py-3 shadow-md">
+            <div class="flex items-center space-x-2 w-full max-w-md mx-auto">
+                <input type="text" placeholder="Search doctors, clinics and hospitals"
+                    class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+                    focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+                <button
+                    class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                    </svg>
+                    <span>Search</span>
+                </button>
+            </div>
+        </div>
 
 
         <!-- <section id="heroSearchWrapper"
@@ -206,15 +201,15 @@
         <!-- Doctor Profile Section -->
 
 
-        <section class="bg-white px-4 sm:px-6 py-10 text-gray-900 pt-[70px] sm:pt-[100px] md:pt-[120px]">
+        <section class="bg-white px-4 sm:px-6 py-10 text-gray-900 z-30 mt-[140px] sm:mt-[140px] lg:mt-[100px]">
 
 
-            <div class="max-w-5xl mx-auto rounded-sm shadow-md p-6 bg-gradient-to-br from-blue-100 to-white">
+            <div class="max-w-6xl mx-auto rounded-sm shadow-md p-6 bg-gradient-to-br from-blue-100 to-white">
               <div class="flex flex-col md:flex-row gap-6">
           
                 <!-- Doctor Image + Experience Info -->
                 <div class="w-full md:w-1/4 relative">
-                  <img src="./../assest/doctor1.jpeg" alt="Dr. Meera Verma"
+                  <img src="./../assets/doctor1.jpeg" alt="Dr. Meera Verma"
                     class="rounded-sm object-cover md:object-cover object-center w-full h-60 md:h-72 border" />
           
                   <!-- Experience Info below image -->
@@ -324,19 +319,30 @@
 
 
 
-                    <!-- Carousel -->
-                    <div class="flex overflow-x-auto gap-4 scrollbar-thin scrollbar-thumb-blue-300 pb-2 mt-2">
-                        <img src="./../assest/smile-bright-dental-clinic.avif" alt="Clinic 1"
-                            class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200" />
-                        <img src="./../assest/Healing Touch Multispeciality Hospital.webp" alt="Clinic 2"
-                            class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200" />
-                        <img src="./../assest/CityCare Clinic.jpeg" alt="Clinic 3"
-                            class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200" />
-                        <div
-                            class="h-24 w-36 flex items-center justify-center bg-blue-900 text-white font-semibold text-sm rounded shadow">
-                            +12 More
-                        </div>
-                    </div>
+                           <!-- 🖼️ Carousel -->
+                           <div class="flex overflow-x-auto gap-4 scrollbar-thin scrollbar-thumb-blue-300">
+                            <!-- Image 1: Always visible -->
+                            <img src="./../assets/apollo-hospital.jpeg" alt="Clinic 1"
+                              class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200 cursor-pointer" onclick="openModal(0)" />
+                          
+                            <!-- Image 2: Hidden on very small screens -->
+                            <img src="./../assets/Healing Touch Multispeciality Hospital.webp" alt="Clinic 2"
+                              class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200 cursor-pointer hidden sm:block" onclick="openModal(1)" />
+                          
+                            <!-- Image 3: Only visible on md and above -->
+                            <img src="./../assets/apollo-hospital.jpeg" alt="Clinic 3"
+                              class="h-24 w-36 object-cover rounded shadow hover:scale-105 transition duration-200 cursor-pointer hidden md:block" onclick="openModal(2)" />
+                          
+                            <!-- "+X More" Container: Always visible, responsive with flex -->
+                            <div id="moreImagesContainer"
+                              class="h-24 w-36 relative rounded shadow cursor-pointer overflow-hidden flex-shrink-0"
+                              onclick="openModal(3)">
+                              <img src="./../assets/doctor3.jpeg" alt="+More" class="h-full w-full object-cover" />
+                              <div class="absolute inset-0 bg-blue-900 bg-opacity-70 flex items-center justify-center">
+                                <span id="moreImageCount" class="text-white font-semibold text-sm">+X More</span>
+                              </div>
+                            </div>
+                          </div>
 
                     <!-- Info Box -->
                     <div class="bg-blue-50 text-sm text-gray-700 p-4 rounded border border-blue-100">
@@ -365,6 +371,30 @@
         </section>
 
 
+        <!-- 🖼️ Image Modal Popup -->
+        <div id="imageModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center">
+            <!-- 🛠 Add id="modalContent" here -->
+            <div id="modalContent" class="relative bg-white rounded-sm max-w-3xl w-full p-4 shadow-lg">
+                <!-- Close Button -->
+                <button onclick="closeModal()"
+                    class="absolute top-2 right-3 text-gray-700 text-2xl hover:text-red-500">&times;</button>
+
+                <!-- Carousel Container -->
+                <div class="relative">
+                    <img id="modalImage" src="" alt="Preview" class="w-full h-80 object-contain rounded-md" />
+
+                    <button onclick="prevImage()"
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-blue-200">
+                        <i class="fas fa-chevron-left text-blue-900 text-xl"></i>
+                    </button>
+
+                    <button onclick="nextImage()"
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow hover:bg-blue-200">
+                        <i class="fas fa-chevron-right text-blue-900 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
 
 
 

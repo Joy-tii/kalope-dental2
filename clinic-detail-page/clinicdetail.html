@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clicnic detail page</title>
+    <link rel="stylesheet" href="./clinicdtail.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-pE+YFn8W+Yt1qV... (truncated)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="text-white">
+
+    <!-- Background Image Layer -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="./assets/hero-image.png" class="w-full h-full object-cover object-right z-0" />
+        <div class="absolute inset-0 bg-gradient-custom z-10"></div>
+    </div>
+
+    <!-- Foreground Content -->
+    <div class="relative z-20">
+
+        <!-- Fixed Navbar -->
+        <header
+            class="bg-gradient-header fixed top-0 left-0 right-0 z-50 shadow-md w-full h-[80px] px-4 sm:px-6 md:px-8 flex items-center justify-between">
+
+            <!-- Brand -->
+            <h1 class="text-xl sm:text-2xl font-bold text-white whitespace-nowrap flex-shrink-0">
+                Kalope Dental
+            </h1>
+
+            <!-- Centered Search Bar (Desktop only) -->
+            <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-full max-w-md">
+                <div class="flex items-center space-x-2">
+                    <input type="text" placeholder="Search doctors, clinics and hospitals"
+                        class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+                        focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+                    <button
+                        class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                        </svg>
+                        <span>Search</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="ml-auto flex items-center space-x-4">
+                <!-- Desktop Sign Up -->
+                <a href="#" class="hidden md:inline-block px-4 py-1 font-semibold text-blue-700 bg-white rounded-sm transition-all duration-300 ease-in-out
+                    hover:text-white hover:bg-blue-600/10 hover:backdrop-blur-md
+                    hover:border hover:border-blue-500 hover:shadow-[0_0_8px_rgba(50,80,120,0.2)]
+                    border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    Sign Up
+                </a>
+
+                <!-- Hamburger (Mobile only) -->
+                <button id="hamburger-btn" class="md:hidden text-white text-2xl p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden flex-col bg-white text-gray-900 w-full px-4 py-4 space-y-3 shadow-md">
+            <a href="#" class="block font-semibold hover:text-blue-600">Home</a>
+            <a href="#" class="block font-semibold hover:text-blue-600">About</a>
+            <a href="#"
+                class="block font-semibold text-white bg-blue-600 px-4 py-2 rounded-sm text-center hover:bg-blue-700 transition">
+                Sign Up
+            </a>
+        </div>
+
+        <!-- ✅ Search Bar for Mobile & Tablet (Below Navbar) -->
+        <div class="block lg:hidden fixed top-[80px] left-0 right-0 bg-gradient-header z-40 px-4 py-3 shadow-md">
+            <div class="flex items-center space-x-2 w-full max-w-md mx-auto">
+                <input type="text" placeholder="Search doctors, clinics and hospitals"
+                    class="w-full h-9 text-sm px-3 rounded-sm text-white bg-white/20 border border-white/20
+                    focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-gray-300 shadow-sm transition duration-300" />
+                <button
+                    class="group h-9 px-3 py-1.5 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z" />
+                    </svg>
+                    <span>Search</span>
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+
+    <script src="./clinicdetail.js"></script>
+</body>
+</html>

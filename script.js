@@ -30,3 +30,6 @@ const menu = document.getElementById('mobile-menu');
       navbarSearch.classList.add("opacity-0", "translate-y-[-10px]");
     }
   });
+
+
+  

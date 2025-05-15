@@ -51,18 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalContent = document.getElementById('modalContent');
 
     const imageSources = [
-      "./../assest/apollo-hospital.jpeg",
-      "./../assest/Healing Touch Multispeciality Hospital.webp",
-      "./../assest/apollo-hospital.jpeg",
-      "./../assest/doctor1.jpeg",
-      "./../assest/doctor2.jpeg",
-      "./../assest/doctor3.jpeg",
-      "../assest/Ophthalmology.jpeg",
-      "../assest/Dermatology.jpeg",
-      "../assest/Pediatrics.jpeg",
-      "../assest/Orthopedics.jpeg",
-      "./../assest/Cardiology.jpeg",
-      "../assest/Neurology.jpeg"
+      "./../assets/apollo-hospital.jpeg",
+      "./../assets/Healing Touch Multispeciality Hospital.webp",
+      "./../assets/apollo-hospital.jpeg",
+      "./../assets/doctor1.jpeg",
+      "./../assets/doctor2.jpeg",
+      "./../assets/doctor3.jpeg",
+      "../assets/Ophthalmology.jpeg",
+      "../assets/Dermatology.jpeg",
+      "../assets/Pediatrics.jpeg",
+      "../assets/Orthopedics.jpeg",
+      "./../assets/Cardiology.jpeg",
+      "../assets/Neurology.jpeg"
     ];
 
     let currentIndex = 0;
@@ -137,3 +137,94 @@ function updateMoreImageCount() {
   window.addEventListener('resize', updateMoreImageCount);
   
   });
+
+
+
+
+
+  async function fetchHospitals() {
+    try {
+      const response = await fetch("http://localhost:4000/public/list");
+      const data = await response.json();
+  
+      const container = document.querySelector("#hospital-list");
+      container.innerHTML = ''; // Clear existing content
+  
+      data.data.forEach(hospital => {
+        const {
+          name,
+          type,
+          address,
+          registrationNumber,
+          accreditation,
+          yearEstablished,
+          licenseNumber,
+          bedCapacity,
+          doctors,
+          medicalEquipment,
+          operationalDetails,
+          ownerName
+        } = hospital;
+  
+        const hospitalHTML = `
+          <div class="max-w-6xl mx-auto rounded-sm shadow-md p-6 bg-gradient-to-br from-blue-100 to-white my-6">
+            <div class="flex flex-col md:flex-row gap-8">
+              <!-- Hospital Image -->
+              <div class="w-full md:w-1/4 relative">
+                <img src="./../assets/hospital-placeholder.jpg" alt="${name}" class="rounded-sm object-contain md:object-cover object-center w-full h-60 md:h-72 border" />
+                <div class="bg-blue-900 text-white text-center text-sm font-medium py-2 mt-2 rounded-sm">
+                  ${bedCapacity} Beds • ${doctors.length} Doctors
+                </div>
+              </div>
+  
+              <!-- Hospital Info -->
+              <div class="w-full md:w-3/4 flex flex-col justify-between">
+                <div class="space-y-4">
+                  <h2 class="text-2xl font-bold text-blue-900">${name}</h2>
+                  <p class="text-base font-medium">${type.charAt(0).toUpperCase() + type.slice(1)} Hospital</p>
+                  <p class="text-base text-gray-700">Located in
+                    <span class="font-semibold text-blue-800">${address.city}, ${address.state}</span>
+                  </p>
+  
+                  <!-- Details Grid -->
+                  <div class="grid md:grid-cols-2 gap-8 mt-4">
+                    <div class="space-y-2">
+                      <p><span class="font-semibold text-blue-700">Registration No.:</span> ${registrationNumber}</p>
+                      <p><span class="font-semibold text-blue-700">Accreditation:</span> ${accreditation.join(", ")}</p>
+                      <p><span class="font-semibold text-blue-700">Established:</span> ${yearEstablished}</p>
+                      <p><span class="font-semibold text-blue-700">License No.:</span> ${licenseNumber}</p>
+                    </div>
+                    <div class="space-y-2">
+                      <p><span class="font-semibold text-blue-800">Mon - Sat:</span> ${operationalDetails.openTime} – ${operationalDetails.closeTime}</p>
+                      <p><span class="font-semibold text-blue-700">Emergency:</span>
+                        <span class="text-green-700 font-semibold">${operationalDetails.emergencyAvailable ? "24x7 Available" : "Not Available"}</span>
+                      </p>
+                      <p><span class="font-semibold text-blue-700">Medical Equipment:</span> ${medicalEquipment.length > 0 ? medicalEquipment.join(", ") : "N/A"}</p>
+                      <p><span class="font-semibold text-blue-700">Bed Capacity:</span> ${bedCapacity}</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center md:items-start mt-6">
+                  <button class="w-48 px-5 py-2 text-sm font-semibold text-white rounded-sm shadow-md bg-gradient-to-r from-blue-500 to-blue-700 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2">
+                    <i class="fas fa-phone text-white"></i> <span>Call Now</span>
+                  </button>
+                  <button class="w-48 bg-white border border-blue-700 text-blue-700 px-4 py-2 rounded-sm hover:bg-blue-50 transition text-sm font-medium flex items-center justify-center space-x-2">
+                    <i class="fas fa-calendar-alt text-blue-700"></i> <span>Book Appointment</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+  
+        container.innerHTML += hospitalHTML;
+      });
+  
+    } catch (error) {
+      console.error("Error fetching hospitals:", error);
+    }
+  }
+  
+  // Call the function when the page loads
+  document.addEventListener("DOMContentLoaded", fetchHospitals);

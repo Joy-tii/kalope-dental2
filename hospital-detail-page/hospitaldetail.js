@@ -159,8 +159,8 @@ async function fetchHospitalById(id,type) {
 
   try {
     console.log("Hospital ID from URL:", id); // ✅
-
-    const res = await fetch(`http://localhost:5000/public/list/${id}?type=${type}`);
+  const res = await fetch(`https://backend.kalopedental.com/public/list/${id}?type=${type}`);
+    // const res = await fetch(`http://localhost:5000/public/list/${id}?type=${type}`);
     const result = await res.json();
     console.log("API response:", result); // ✅
 

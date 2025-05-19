@@ -31,5 +31,12 @@ const menu = document.getElementById('mobile-menu');
     }
   });
 
-
+  document.getElementById("searchButton").addEventListener("click", () => {
+    const query = document.getElementById("searchInput").value.trim();
+    if (query) {
+      const encodedQuery = encodeURIComponent(query);
+      // Redirect to the results page with the search query
+      window.location.href = `./searchpage/searchpage.html?search=${encodedQuery}`;
+    }
+  });
   

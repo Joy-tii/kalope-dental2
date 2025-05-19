@@ -105,7 +105,7 @@ function renderHospitals(data, query = "") {
 // Initial Fetch
 async function fetchAllHospitals() {
   try {
-    const res = await fetch("http://localhost:5000/public/list");
+    const res = await fetch("https://backend.kalopedental.com/public/list");
     const data = await res.json();
     if (data.success && Array.isArray(data.data)) {
       allHospitalsData = data.data;
